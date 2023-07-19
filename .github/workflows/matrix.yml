@@ -23,13 +23,13 @@ jobs:
           creds: '{"clientId":"${{ secrets.CLIENT_ID }}","clientSecret":"${{ secrets.CLIENT_SECRET }}","tenantId":"${{ secrets.TENANT_ID }}","subscriptionId":"${{ secrets.SUBSCRIPTION_ID }}"}'
       - name: Terraform Init
         run: |
-          cd childmodule
+          cd RG
           terraform init
       - name: Terraform Plan
         run: |
-          cd childmodule
+          cd RG
           terraform plan
       - name: Terraform Apply
         run: |
-          cd childmodule
+          cd RG
           terraform apply -auto-approve
